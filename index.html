@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Navigation Bar-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="https://used-car-price-prediction-k.herokuapp.com">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+  </ul>
+</nav>
+<br>
+<div class="container">
+  <!--<img align="middle" src="https://image.freepik.com/free-vector/by-my-car-illustration-concept_114360-870.jpg"> -->
+  <h1>Car Price Prediction</h1>
+  <p style="font-style: italic;">Fill the Details to predict the price of your car</p>
+    <!-- User Input Form-->
+    <form action="/" method="POST">
+        <div class="form-group">
+         <!--<label for="year">What is the purchase year</label>
+          <input type="number" min="1900" max="2099" step="1" class="form-control" placeholder="Year" id="year" name="year" required><br>
+            <label for="distance">What is The total distance travelled?</label>
+            <input type="number" step="0.01" class="form-control" placeholder="Distance(In KM)" id="distance" name="distance" required><br> -->
+            <label for="mileage">Car Mileage:</label>
+            <input type="number" step="0.01" class="form-control" placeholder="Mileage" id="mileage" name="mileage" required><br>
+            <label for="engine">What is The Engine Capacity?</label>
+            <input type="number" step="0.01" class="form-control" placeholder="Engine(In CC)" id="engine" name="engine" required><br>
+            <label for="max_power">What is the max power?</label>
+            <input type="number" step="0.01" class="form-control" placeholder="Max Power" id="max_power" name="max_power" required><br>
+            <div class="button-group" style="margin-top:15px;"><br>
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- After Prediction original-->
+
+<!--<div class="container">
+  <h2></h2>
+  <div class="alert alert-info" role="alert">
+    <strong></strong> Prediction of your Car's price is : {{output}}
+  </div>
+</div>
+-->
+<!-- After Prediction duplicate-->
+<p>Predicted Price: {{ prediction }}</p>
+  
+</body>
+</html>
