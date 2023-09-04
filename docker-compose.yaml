@@ -2,12 +2,11 @@ version: '3.8'
 
 services:
   web:
-    image: carspricepredictionproject:latest
-    build: ./services/web
-    command: python manage.py run -h 0.0.0.0
-    volumes:
-      - ./services/web/:/usr/src/app/
+    command: flask --app app run --host 0.0.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - 5001:5000
-    env_file:
-      - ./.env.dev
+      - '5000:5000'
+    volumes:
+      - .:/app
